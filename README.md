@@ -1,3 +1,5 @@
+[![NPM version](https://img.shields.io/npm/v/eslint-plugin-moxio.svg)](https://www.npmjs.com/package/eslint-plugin-moxio)
+
 eslint-plugin-moxio
 ===================
 Custom rules for ESLint, as used at Moxio.
