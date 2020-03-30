@@ -1,0 +1,37 @@
+{
+  "name": "eslint-plugin-moxio",
+  "version": "4.0.0",
+  "description": "Custom rules for ESLint as used at Moxio",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "lint",
+    "design-system",
+    "css"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.js"
+  },
+  "author": {
+    "name": "Moxio",
+    "email": "info@moxio.com",
+    "url": "https://www.moxio.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Moxio/eslint-plugin-moxio.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "requireindex": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "mocha": "^7.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.2.0"
+  }
+}
