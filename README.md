@@ -59,6 +59,8 @@ of allowed files. This includes:
 * Usage of CSS class as key in an object: `const obj = {$: true};`
 * Usage of CSS class in an object property: `const obj = { "class": $ };`
 
+These rules are also applied to template strings.
+
 #### Configuration
 The `cssClasses` configuration property is an object with the restricted CSS classes as keys, and
 an array of file path patterns (regular expressions) in which that CSS class may be used as the

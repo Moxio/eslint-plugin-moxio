@@ -94,12 +94,27 @@ ruleTester.run("restrict-css-class-usage-to-files", rule, {
 			filename: 'whitelisted_file.tsx',
 			options: default_options
 		},
+        {
+            code: 'const properties = []; properties.push(`restricted-css-class`);',
+            filename: 'whitelisted_file.tsx',
+            options: default_options
+        },
+        {
+            code: 'const properties = []; properties.push(`restricted-css-class`);',
+            filename: 'whitelisted_file.js',
+            options: default_options
+        },
 		{
 			code: '<div className="restricted-css-class" />',
 			filename: 'whitelisted_file.tsx',
 			options: default_options
-		}
-	],
+		},
+        {
+            code: '<div className={`restricted-css-class`} />',
+            filename: 'whitelisted_file.tsx',
+            options: default_options
+        }
+    ],
 	invalid: [
 		{
 			code: 'const properties = { "class": "restricted-css-class" }',
@@ -131,7 +146,19 @@ ruleTester.run("restrict-css-class-usage-to-files", rule, {
 			errors: default_errors,
 			options: default_options
 		},
-		{
+        {
+            code: 'const properties = [ `restricted-css-class` ]',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: 'const properties = [ `restricted-css-class` ]',
+            filename: 'file.tsx',
+            errors: default_errors,
+            options: default_options
+        },
+        {
 			code: 'const properties = [ "restricted-css-class" ]',
 			filename: 'file.tsx',
 			errors: default_errors,
@@ -149,11 +176,35 @@ ruleTester.run("restrict-css-class-usage-to-files", rule, {
 			errors: default_errors,
 			options: default_options
 		},
-		{
+        {
+            code: 'const properties = []; properties.push(`restricted-css-class`);',
+            filename: 'file.tsx',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: 'const properties = []; properties.push(`restricted-css-class`);',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
+        {
 			code: '<div className="restricted-css-class" />',
 			filename: 'file.tsx',
 			errors: default_errors,
 			options: default_options
-		}
-	],
+		},
+        {
+            code: '<div className={`restricted-css-class`} />',
+            filename: 'file.tsx',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: '<div className={`restricted-css-class`} />',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
+    ],
 });
