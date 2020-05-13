@@ -95,6 +95,25 @@ own custom implementations of `acme-button`. For such cases you could limit usag
 CSS class to only e.g. `/components/Button.tsx` or `/components/Button.vue`. Of course, this only
 works if your CSS classes are specific enough.
 
+
+### prefer-useref-function-components
+Rule that warns if React.createRef() is used in a function component, instead of the preferred useRef hook.
+
+
+#### Configuration
+
+```json
+{
+    "rules": {
+        "moxio/prefer-useref-function-components": "warn",
+    }
+}
+```
+
+#### Motivation
+This plugin is mainly useful when switching from class components to function components. 
+
+
 Versioning
 ----------
 This project adheres to [Semantic Versioning](http://semver.org/).
