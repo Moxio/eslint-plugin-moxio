@@ -60,7 +60,7 @@ ruleTester.run("prefer-useref-function-components", rule, {
       ],
     },
     {
-      code: `function MyComponent() {
+      code: `const MyComponent = () => {
                 const ref = React.createRef();
                 return <div>valid</div>
             }`,
