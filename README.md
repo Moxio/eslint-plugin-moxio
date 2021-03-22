@@ -111,8 +111,35 @@ Rule that warns if React.createRef() is used in a function component, instead of
 ```
 
 #### Motivation
-This plugin is mainly useful when switching from class components to function components. 
+This plugin is mainly useful when switching from class components to function components.
 
+### restrict-import-from-source
+Rule that can restrict importing certain identifiers from a source.
+For example, you could warn if somebody tries to import `Difference` from the `js-struct-compare` package.
+
+### Configuration
+```json
+{
+	"rules": {
+		"moxio/restrict-import-from-source": [
+			"warn",
+			{
+				"sources": {
+					"js-struct-compare": {
+						"identifiers": [
+							"Difference"
+						],
+                        "message": "{{ identifier }} on {{ source }} has been restricted"
+                    }
+				}
+			}
+		]
+	}
+}
+```
+
+#### Motivation
+We use this plugin ourselves when we use a library but want to prevent certain imports from it that have unexpected side effects.
 
 Versioning
 ----------
