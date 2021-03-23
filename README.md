@@ -117,7 +117,7 @@ This plugin is mainly useful when switching from class components to function co
 Rule that can restrict importing certain identifiers from a source.
 For example, you could warn if somebody tries to import `Difference` from the `js-struct-compare` package.
 
-### Configuration
+#### Configuration
 ```json
 {
 	"rules": {
@@ -127,8 +127,8 @@ For example, you could warn if somebody tries to import `Difference` from the `j
 				"sources": {
 					"js-struct-compare": {
 						"identifiers": [
-							"Difference"
-						],
+                            "Difference"
+					    ],
                         "message": "{{ identifier }} on {{ source }} has been restricted"
                     }
 				}
