@@ -54,5 +54,19 @@ ruleTester.run("restrict-import-from-source", rule, {
             errors: default_errors,
             options: default_options
         },
+        {
+            code: 'import { restrictedIdentifier, unrestrictedIdentifier } from "restrictedSource";',
+            errors: [{ message: "test restrictedIdentifier test restrictedSource..." }],
+            options: [{
+                "sources": {
+                    "restrictedSource": {
+                        "identifiers": [
+                            "restrictedIdentifier"
+                        ],
+                        "message": "test {{ identifier }} test {{ source }}..."
+                    }
+                }
+            }]
+        },
     ],
 });
