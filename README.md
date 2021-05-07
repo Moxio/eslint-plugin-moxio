@@ -1,3 +1,4 @@
+![CI](https://github.com/Moxio/eslint-plugin-moxio/workflows/CI/badge.svg)
 [![NPM version](https://img.shields.io/npm/v/eslint-plugin-moxio.svg)](https://www.npmjs.com/package/eslint-plugin-moxio)
 
 eslint-plugin-moxio
