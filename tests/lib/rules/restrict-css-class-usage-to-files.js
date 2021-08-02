@@ -49,6 +49,12 @@ ruleTester.run("restrict-css-class-usage-to-files", rule, {
 				}
 			}]
 		},
+        {
+            code: 'const properties = { "restricted-css-class": <div /> }',
+            filename: 'file.tsx',
+            errors: default_errors,
+            options: default_options
+        },
 		//Test to see if windows file paths are normalized
 		{
 			code: 'const properties = { "class": "restricted-css-class" }',
