@@ -6,11 +6,13 @@ const rule = require("../../../lib/rules/restrict-css-class-usage-to-files");
 const RuleTester = require("eslint").RuleTester;
 
 const ruleTester = new RuleTester({
-	parserOptions: {
-		ecmaVersion: 6,
-		ecmaFeatures: {
-			jsx: true,
-		},
+    languageOptions: {
+        parserOptions: {
+            ecmaVersion: 6,
+            ecmaFeatures: {
+                jsx: true,
+            },
+        },
 	}
 });
 
