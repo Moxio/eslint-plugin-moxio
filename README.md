@@ -142,6 +142,21 @@ For example, you could warn if somebody tries to import `Difference` from the `j
 #### Motivation
 We use this plugin ourselves when we use a library but want to prevent certain imports from it that have unexpected side effects.
 
+### restrict-dome-node-retrieval
+Rule that restricts using dom-retrieval methods ("querySelector", "querySelectorAll", "getElementsByTagName", "getElementsByTagNameNS", "getElementsByClassName", "getElementById") from document.
+
+#### Configuration
+```json
+{
+	"rules": {
+		"moxio/restrict-dome-node-retrieval": "warn"
+	}
+}
+```
+
+#### Motivation
+We use this rule ourselves to prevent direct dom manipulation in our React projects: https://react.dev/learn/manipulating-the-dom-with-refs
+
 Versioning
 ----------
 This project adheres to [Semantic Versioning](http://semver.org/).
