@@ -214,5 +214,29 @@ ruleTester.run("restrict-css-class-usage-to-files", rule, {
             errors: default_errors,
             options: default_options
         },
+        {
+            code: 'fn("restricted-css-class")',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: 'fn(`restricted-css-class`)',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: '<div className={fn("restricted-css-class")} />',
+            filename: 'file.tsx',
+            errors: default_errors,
+            options: default_options
+        },
+        {
+            code: '<div className={fn(`restricted-css-class`)} />',
+            filename: 'file.js',
+            errors: default_errors,
+            options: default_options
+        },
     ],
 });
