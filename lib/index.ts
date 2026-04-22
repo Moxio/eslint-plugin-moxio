@@ -1,8 +1,8 @@
 import type { Plugin } from "@eslint/core";
-import { preferUseRefFunctionComponents } from "./rules/preferUseRefFunctionComponents";
-import { restrictCssClassUsageToFiles } from "./rules/restrictCssClassUsageToFiles";
-import { restrictDomNodeRetrieval } from "./rules/restrictDomNodeRetrieval";
-import { restrictImportFromSource } from "./rules/restrictImportFromSource";
+import { preferUseRefFunctionComponents } from "./rules/preferUseRefFunctionComponents.js";
+import { restrictCssClassUsageToFiles } from "./rules/restrictCssClassUsageToFiles.js";
+import { restrictDomNodeRetrieval } from "./rules/restrictDomNodeRetrieval.js";
+import { restrictImportFromSource } from "./rules/restrictImportFromSource.js";
 
 
 const plugin: Plugin = {

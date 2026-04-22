@@ -10,6 +10,7 @@
 		"design-system",
 		"css"
 	],
+	"main": "esm/index.js",
 	"files": [
 		"esm/"
 	],
