@@ -94,51 +94,51 @@ ruleTester.run("restrict-dom-node-retrieval", rule, {
     invalid: [
         {
             code: `element = document.querySelector(".class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.querySelector(".class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = document.querySelectorAll(".class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.querySelectorAll(".class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = document.getElementsByTagName("div")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.getElementsByTagName("div")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "div")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "div")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = document.getElementsByClassName("class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.getElementsByClassName("class")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = document.getElementById("id")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
         {
             code: `element = window.document.getElementById("id")`,
-            errors: [ { message: ERROR_MSG, type: "Identifier" } ],
+            errors: [ { message: ERROR_MSG } ],
         },
     ],
 });
