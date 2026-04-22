@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"rootDir": "lib",
+		"declaration": true,
+		"strictNullChecks": true,
+		"skipLibCheck": true,
+		"outDir": "dist",
+		"lib": [
+			"es2018"
+		],
+		"baseUrl": "./",
+	},
+	"include": [
+		"lib/**/*.ts",
+	]
+}
