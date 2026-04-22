@@ -57,7 +57,6 @@ ruleTester.run("prefer-useref-function-components", rule, {
       errors: [
         {
           message: ERROR_MSG,
-          type: "Identifier",
         },
       ],
     },
@@ -69,7 +68,6 @@ ruleTester.run("prefer-useref-function-components", rule, {
       errors: [
         {
           message: ERROR_MSG,
-          type: "Identifier",
         },
       ],
     },
