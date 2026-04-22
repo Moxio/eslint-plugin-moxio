@@ -1,4 +1,5 @@
 import type { Plugin } from "@eslint/core";
+import { noJsxWhitespace } from "./rules/noJsxWhitespace.js";
 import { preferUseRefFunctionComponents } from "./rules/preferUseRefFunctionComponents.js";
 import { restrictCssClassUsageToFiles } from "./rules/restrictCssClassUsageToFiles.js";
 import { restrictDomNodeRetrieval } from "./rules/restrictDomNodeRetrieval.js";
@@ -16,6 +17,7 @@ const plugin: Plugin = {
         "restrict-css-class-usage-to-files": restrictCssClassUsageToFiles,
         "restrict-dom-node-retrieval": restrictDomNodeRetrieval,
 	    "restrict-import-from-source": restrictImportFromSource,
+	    "no-jsx-whitespace": noJsxWhitespace,
     },
 };
 
