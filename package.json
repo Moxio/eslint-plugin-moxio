@@ -1,37 +1,51 @@
 {
-  "name": "eslint-plugin-moxio",
-  "version": "4.4.0",
-  "description": "Custom rules for ESLint as used at Moxio",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin",
-    "lint",
-    "design-system",
-    "css"
-  ],
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "mocha tests/**/*.js"
-  },
-  "author": {
-    "name": "Moxio",
-    "email": "info@moxio.com",
-    "url": "https://www.moxio.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Moxio/eslint-plugin-moxio.git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "requireindex": "^1.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^10.2.1",
-    "mocha": "^10.6.0"
-  },
-  "peerDependencies": {
-    "eslint": "^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0"
-  }
+	"name": "eslint-plugin-moxio",
+	"version": "4.4.0",
+	"description": "Custom rules for ESLint as used at Moxio",
+	"keywords": [
+		"eslint",
+		"eslintplugin",
+		"eslint-plugin",
+		"lint",
+		"design-system",
+		"css"
+	],
+	"files": [
+		"esm/"
+	],
+	"scripts": {
+		"prepublishOnly": "npm run build",
+		"build": "tsc --project tsconfig.build.json --target esnext --outDir esm --declaration",
+		"test": "jest"
+	},
+	"author": {
+		"name": "Moxio",
+		"email": "info@moxio.com",
+		"url": "https://www.moxio.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Moxio/eslint-plugin-moxio.git"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@eslint/core": "^1.2.1",
+		"@typescript-eslint/types": "^8.59.0",
+		"typescript": "^5.9.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.29.0",
+		"@babel/preset-env": "^7.29.2",
+		"@babel/preset-typescript": "^7.28.5",
+		"@types/eslint": "^9.6.1",
+		"@types/jest": "^30.0.0",
+		"babel-jest": "^30.3.0",
+		"eslint": "^10.2.1",
+		"jest": "^30.3.0",
+		"mocha": "^10.6.0",
+		"ts-node": "^10.9.2"
+	},
+	"peerDependencies": {
+		"eslint": "^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0"
+	}
 }
