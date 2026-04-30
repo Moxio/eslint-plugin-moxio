@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-moxio",
-	"version": "4.4.0",
+	"version": "4.5.0",
 	"description": "Custom rules for ESLint as used at Moxio",
 	"keywords": [
 		"eslint",
@@ -32,7 +32,7 @@
 	"dependencies": {
 		"@eslint/core": "^1.2.1",
 		"@typescript-eslint/types": "^8.59.0",
-		"typescript": "^5.9.3"
+		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.29.0",

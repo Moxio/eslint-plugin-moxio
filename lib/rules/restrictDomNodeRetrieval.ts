@@ -29,7 +29,7 @@ export const restrictDomNodeRetrieval: RuleDefinition = {
 
 	            const isTestCase = findParent(node, (parent) => {
 		            return (
-			            parent.type === "CallExpression" && (parent.callee.name === "it" || parent.callee.name === "describe")
+			            parent.type === "CallExpression" && parent.callee.type === "Identifier" && (parent.callee.name === "it" || parent.callee.name === "describe")
 		            );
 	            });
 
@@ -60,7 +60,7 @@ export const restrictDomNodeRetrieval: RuleDefinition = {
     },
 };
 
-function findParent(node, testFn) {
+function findParent(node: TSESTree.Node, testFn: (node: TSESTree.Node) => boolean) {
     if (testFn(node)) {
         return node;
     } else if (node.parent) {

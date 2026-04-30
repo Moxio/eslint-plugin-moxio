@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "es2022",
-		"moduleResolution": "node",
+		"target": "esnext",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"rootDir": "lib",
 		"declaration": true,
 		"strictNullChecks": true,
@@ -11,7 +11,12 @@
 		"lib": [
 			"es2018"
 		],
-		"baseUrl": "./",
+		"paths": {
+			"*": ["./*"],
+		},
+		"types": [
+			"node"
+		]
 	},
 	"include": [
 		"lib/**/*.ts",
